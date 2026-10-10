@@ -181,11 +181,10 @@ footer p {
     margin: 0;
 } 
 
-@media (max-width: 768px) {
-
+@media (max-width: 768px) { 
     /* aturan CSS untuk viewport dengan lebar minimal 768px */
     main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
 nav ul {
