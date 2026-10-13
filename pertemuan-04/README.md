@@ -14,4 +14,4 @@ Nama : Malya Nadha Janeeta, NIM : 2622500033 Kelas : 26270
 -Validasi CSS : memvalidasi CSS untuk memeriksa kesalahan sintaks dan memperbaiki kesalahan sintaks dan memperbaiki kesalahan yang ditemukan.
 
 ## Repositori 
-URL Github : https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270 
+URL Github : https://2622500033-malya.github.io/2622500033-PWD-SI1A-26270/pertemuan-04/ 
