@@ -1,4 +1,4 @@
+<p>Konten HTML statis.</p>
 <?php
-//Pengujian awal eksekusi PHP.
-echo "PHP berhasil dijalankan.";
-?> 
+echo "<p>konten yang dihasilkan oleh PHP.</p>";
+?>
