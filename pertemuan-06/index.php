@@ -4,6 +4,9 @@ $namaMahasiswa = "Malya Nadha Janeeta";
 $programStudi = "SI";
 $tahunAkademik = "2026/2027";
 $semester = 1;
+// Bagian 2: operator 
+$batasSemester = 7;
+$sisaSemester = $batasSemester - $semester;
 $ipk = 4.00;
 $statusAktif = true;
 $catatanTambahan = null;
@@ -60,7 +63,8 @@ const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-2
 
             <article>
                 <h3>Profil Singkat</h3>
-                </p>
+                <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
+                
                 <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
 
                 <h3>Target Belajar</h3>
