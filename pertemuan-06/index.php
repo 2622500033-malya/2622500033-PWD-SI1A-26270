@@ -7,6 +7,8 @@ $semester = 1;
 $ipk = 4.00;
 $statusAktif = true;
 $catatanTambahan = null;
+const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
+const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270";
 ?>
 
 <!DOCTYPE html>
