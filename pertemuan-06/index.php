@@ -50,7 +50,7 @@ const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-2
     <main>
         <section id="home">
             <h2>Selamat Datang</h2>
-            <p>Halo, saya Malya Nadha Janeeta. Saya sedang mempelajari Pemrograman Web Dasar.</p>
+            <p>Halo, saya <strong><?php echo $namaMahasiswa; ?></strong>. Saya sedang mempelajari matakuliah <strong><?php print NAMA_MATA_KULIAH; ?></strong> pada tahun akademik <?php echo $tahunAkademik; ?>.</p>
 
             <img src="../fotoi.jpeg" alt="Foto Profil Malya" />
         </section>
@@ -78,7 +78,7 @@ const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-2
 
             <p>
               Kunjungi 
-              <a href="https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270.git/">Profil Github saya</a>.
+              <a target="_blank" href="https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270<?= PROFIL_GITHUB ?>">Profil Github saya</a>.
             </p>
 
             <form id ="contactForm" action="index.html" method="get" novalidate>
