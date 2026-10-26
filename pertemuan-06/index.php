@@ -7,8 +7,10 @@ $semester = 1;
 // Bagian 2: operator 
 $batasSemester = 7;
 $sisaSemester = $batasSemester - $semester;
-$ipk = 4.00;
+$semesterValid = $semester >= 1 && $semester <=$batasSemester;
 $statusAktif = true;
+$statusSemester = ($semesterValid && $statusAktif) ? "Perlu diperiksa" : "Sesuai rentang"; 
+$ipk = 4.00; 
 $catatanTambahan = null;
 const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
 const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270";
@@ -64,7 +66,7 @@ const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-2
             <article>
                 <h3>Profil Singkat</h3>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
-                
+                <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
                 <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
 
                 <h3>Target Belajar</h3>
