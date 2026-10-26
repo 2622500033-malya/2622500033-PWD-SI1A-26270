@@ -1,7 +1,14 @@
 <?php
-//Pengujian awal eksekusi PHP.
-echo "PHP berhasil dijalankan.";
+$nim = "2622500033";
+$namaMahasiswa = "Malya Nadha Janeeta";
+$programStudi = "SI";
+$tahunAkademik = "2026/2027";
+$semester = 1;
+$ipk = 4.00;
+$statusAktif = true;
+$catatanTambahan = null;
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,18 +19,7 @@ echo "PHP berhasil dijalankan.";
 </head>
     
 <body>
-    <?php
-//Komentar satu baris.
-echo "Keluaran menggunakan echo.";
 
-/*
-Komentar beberapa baris.
-Komentar ini tidak ditampilkan pada halaman.
-*/
-?>Konten HTML statis.</p>
-<?php
-echo "<p>Konten yang dihasilkan oleh PHP.</p>";
-?>
     <header>
       <div class="header-top"> 
         <h1>Profil Mahasiswa</h1>
@@ -62,13 +58,6 @@ echo "<p>Konten yang dihasilkan oleh PHP.</p>";
 
             <article>
                 <h3>Profil Singkat</h3>
-                <p> Sisa semester hingga batas:
-                    <?php echo $sisaSemester = 6;
-                               $semesterValid = $semester >= 1 && $semester <= $batasSemester;
-                               $statusSemester = ($semesterValid && $statusAktif) ? "sesuai rentang" : "Perlu diperiksa"
-                                <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p> 
-                
-                    ?>
                 </p>
                 <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
 
