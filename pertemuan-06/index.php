@@ -14,6 +14,14 @@ $ipk = 4.00;
 $catatanTambahan = null;
 const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
 const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270";
+// Bagian 3: Percabangan if-elseif-else
+if ($semester < 3){
+    $keteranganSemester = "Semester awal";
+} elseif ($semester <= 6) {
+    $keteranganSemester = "Semester menengah";
+} else {
+    $keteranganSemester = "Semester akhir";
+}
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +73,8 @@ const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-2
 
             <article>
                 <h3>Profil Singkat</h3>
+
+                <p>Semester: <?php echo $semester . "(" . $keteranganSemester . ")"; ?></p>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
                 <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
                 <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
