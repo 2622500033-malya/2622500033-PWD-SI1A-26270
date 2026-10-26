@@ -1,4 +1,6 @@
 <?php
+// P6: PHP dasar dan pemrograman sisi peladen
+// Bagian 1: Variabel dan konstanta
 $nim = "2622500033";
 $namaMahasiswa = "Malya Nadha Janeeta";
 $programStudi = "SI";
@@ -9,7 +11,7 @@ $batasSemester = 7;
 $sisaSemester = $batasSemester - $semester;
 $semesterValid = $semester >= 1 && $semester <=$batasSemester;
 $statusAktif = true;
-$statusSemester = ($semesterValid && $statusAktif) ? "Perlu diperiksa" : "Sesuai rentang"; 
+$statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa"; 
 $ipk = 4.00; 
 $catatanTambahan = null;
 const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
@@ -22,6 +24,8 @@ if ($semester < 3){
 } else {
     $keteranganSemester = "Semester akhir";
 }
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik
+Informatika" : "Lainnya");
 ?>
 
 <!DOCTYPE html>
@@ -74,10 +78,12 @@ if ($semester < 3){
             <article>
                 <h3>Profil Singkat</h3>
 
-                <p>Semester: <?php echo $semester . "(" . $keteranganSemester . ")"; ?></p>
+                <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
+                <p>Status Mahasiswa <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
+                <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
                 <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
-                <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
+                <p>Saya mahasiswa Program Studi Sistem Informasi.</p> 
 
                 <h3>Target Belajar</h3>
 
