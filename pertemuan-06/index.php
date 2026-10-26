@@ -1,3 +1,7 @@
+<?php
+//Pengujian awal eksekusi PHP.
+echo "PHP berhasil dijalankan.";
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -47,7 +51,11 @@
             <article>
                 <h3>Profil Singkat</h3>
                 <p> Sisa semester hingga batas:
-                    <?php echo $sisaSemester = 7;
+                    <?php echo $sisaSemester = 6;
+                               $semesterValid = $semester >= 1 && $semester <= $batasSemester;
+                               $statusSemester = ($semesterValid && $statusAktif) ? "sesuai rentang" : "Perlu diperiksa"
+                                <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p> 
+                
                     ?>
                 </p>
                 <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
