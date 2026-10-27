@@ -231,8 +231,8 @@ switch ($programStudi) {
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Malya Nadha Janeeta [2622500033]</p>
+    <footer> 
+        <p>&copy; <?= date ("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
     </footer>
     <script src="script.js"></script>
 </body>
