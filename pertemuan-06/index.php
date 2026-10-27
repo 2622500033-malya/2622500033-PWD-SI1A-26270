@@ -12,7 +12,7 @@ $sisaSemester = $batasSemester - $semester;
 $semesterValid = $semester >= 1 && $semester <=$batasSemester;
 $statusAktif = true;
 $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa"; 
-$ipk = 4.00; 
+$ipk = 3.75; 
 $catatanTambahan = null;
 const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
 const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270";
@@ -95,6 +95,7 @@ switch ($programStudi) {
                 <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
                 <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
                 <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
+                <p>IPK: <?php echo number_format($ipk,2, ',', '.'); ?></p> 
                 <p>Saya mahasiswa Program Studi Sistem Informasi.</p> 
 
                 <h3>Target Belajar (pengulangan for)</h3>
@@ -123,7 +124,18 @@ switch ($programStudi) {
              echo "</li>";
           }
           ?>
-                </ol>
+          </ol>
+            <h3>Semester (Perulangan while):</h3>
+            <ol>
+            <?php
+            $nomorSemester = 1;
+            while ($nomorSemester <= 3) {
+            echo "<li>Semester " . $nomorSemester . "</li>";
+            $nomorSemester++; // operator penugasan
+          }
+          ?>
+        </ol>
+            
             </article>
         </section>
 
