@@ -1,4 +1,9 @@
 <?php
+// P7: penggunaan POST
+if (isset($_POST['nama'])){
+    $nama = $_POST['nama'];
+    echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
+}
 // P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
 $nim = "2622500033";
@@ -6,16 +11,16 @@ $namaMahasiswa = "Malya Nadha Janeeta";
 $programStudi = "SI";
 $tahunAkademik = "2026/2027";
 $semester = 1;
+$ipk = 3.75; 
+$statusAktif = true;
+$catatanTambahan = null;
+const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
+const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270";
 // Bagian 2: operator 
 $batasSemester = 7;
 $sisaSemester = $batasSemester - $semester;
 $semesterValid = $semester >= 1 && $semester <=$batasSemester;
-$statusAktif = true;
 $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa"; 
-$ipk = 3.75; 
-$catatanTambahan = null;
-const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
-const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270";
 // Bagian 3: Percabangan if-elseif-else
 if ($semester < 3){
     $keteranganSemester = "Semester awal";
@@ -24,8 +29,7 @@ if ($semester < 3){
 } else {
     $keteranganSemester = "Semester akhir";
 }
-$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik
-Informatika" : "Lainnya");
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
 // Bagian 4: Percabangan switch-case-default
 switch ($programStudi) {
   case "SI":
@@ -38,14 +42,6 @@ switch ($programStudi) {
     $fokusProgramStudi = "Belum ditentukan";
 }
 ?>
-<?php
-// P7: penggunaan POST
-if (isset($_POST['nama'])) {
-  $nama = $_POST['nama'];
-   echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -153,7 +149,7 @@ if (isset($_POST['nama'])) {
               <a target="_blank" href="https://github.com/2622500033-malya?tab=repositories<?= PROFIL_GITHUB ?>">Profil Github saya</a>.
             </p>
 
-            <form id ="contactForm" action="indexGET.php" method="get" novalidate>
+            <form id ="contactForm" action="index.php" method="post" novalidate>
                 <div class="form-group"> 
                     <label for="nama">Nama Lengkap</label><br />
 
@@ -165,8 +161,7 @@ if (isset($_POST['nama'])) {
                         placeholder="Masukkan nama lengkap"
                         minlength="3"
                         maxlength="50"
-                        required
-                    />
+                        required />
                 </div>
 
                 <div class="form-group">
@@ -207,7 +202,7 @@ if (isset($_POST['nama'])) {
                      <label for="minat-css">CSS</label>  
                 </div>
 
-                <div class="form-group">
+                <div class="form-group"
                   <label for="prodi">Program Studi</label><br />
 
                   <select class="input-form" id="prodi" name="prodi" required>
