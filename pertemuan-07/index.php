@@ -40,7 +40,7 @@ switch ($programStudi) {
 ?>
 <?php
 // P7: penggunaan GET
-if (isset($_GET['nama'])) {
+if (ispertemuan-07/index.phpset($_GET['nama'])) {
    $nama = $_GET['nama'];
    echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
 }
@@ -153,7 +153,7 @@ if (isset($_GET['nama'])) {
               <a target="_blank" href="https://github.com/2622500033-malya?tab=repositories<?= PROFIL_GITHUB ?>">Profil Github saya</a>.
             </p>
 
-            <form id ="contactForm" action="index.php" method="get" novalidate>
+            <form id ="contactForm" action="indexGET.php" method="get" novalidate>
                 <div class="form-group"> 
                     <label for="nama">Nama Lengkap</label><br />
 
