@@ -1,5 +1,92 @@
 <?php
- 
+// P7: penggunaan POST
+    $nama = trim((string) ($_POST['nama'] ?? ''));
+    $email = trim ((string) ($_POST['email'] ?? ''));
+    $semesterForm = trim((string) ($_POST['semester'] ?? ''));
+    $jenisPesan = trim((string) ($_POST['jenis_pesan'] ?? ''));
+    $prodi = trim((string) ($_POST['prodi'] ?? ''));
+    $pesan = trim((string) ($_POST['pesan'] ?? ''));
+    $tanggal = trim((string) ($_POST['tanggal'] ?? ''));
+    $minat = $_POST['minat'] ?? [];
+
+    $pesanKesalahan = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (trim($nama ?? '') === '') {
+        $pesanKesalahan .= 'Nama lengkap wajib diisi. ';
+    }
+
+    if (trim($email) === '') {
+        $pesanKesalahan .= 'Email wajib diisi. ';
+    }
+
+    if (trim($semesterForm) === '') {
+        $pesanKesalahan .= 'Semester wajib diisi. ';
+    }
+
+    if (trim($tanggal) === '') {
+        $pesanKesalahan .= 'Tanggal kunjungan wajib diisi. ';
+    }
+
+    if ($jenisPesan === '') {
+        $pesanKesalahan .= 'Jenis pesan wajib dipilih. ';
+    }
+
+    if ($prodi === '') {
+        $pesanKesalahan .= 'Program studi wajib dipilih. ';
+    }
+
+    if (trim($pesan) === '') {
+        $pesanKesalahan .= 'Pesan wajib diisi. ';
+    }
+
+    if (empty($minat)) {
+        $pesanKesalahan .= 'Minat wajib dipilih minimal satu. ';
+    }
+    
+    if (trim($semesterForm) !== '') {
+    $semesterValid = filter_var(
+        $semesterForm, 
+        FILTER_VALIDATE_INT
+    );
+
+    if (
+        $semesterValid === false ||
+        $semesterValid < 1 ||
+        $semesterValid > 14 
+    ) {
+        $pesanKesalahan .= 'semester harus berupa bilangan bulat antara 1 sampai dan  14. ';
+    }
+}
+
+if (trim($email) !== '') {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        $pesanKesalahan .= 'Format email tidak valid. ';
+    }
+}
+
+if (!in_array($jenisPesan, ['pertanyaan', 'saran'], true)) {
+        $pesanKesalahan .= 'Jenis pesan tidak valid. ';
+    }
+
+if (!in_array($prodi, ['SI', 'TI'], true)) {
+        $pesanKesalahan .= 'Program studi tidak vaid. ';
+    }
+
+$minatDiizinkan = ['HTML', 'CSS'];
+
+if (!is_array($minat)) {
+    $pesanKesalahan .='Format pilihan topik tidak valid. ';
+} else {
+    foreach ($minat as $topik) {
+        if (!in_array($topik, $minatDiizinkan, true)) {
+            $pesanKesalahan .= 'Pilihan topik tidak valid. ';
+            break;
+        }
+    }
+}
+}
+
 // P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
 $nim = "2622500033";
@@ -7,20 +94,21 @@ $namaMahasiswa = "Malya Nadha Janeeta";
 $programStudi = "SI";
 $tahunAkademik = "2026/2027";
 $semester = 1;
-$ipk = 3.75;
+$ipk = 3.75; 
 $statusAktif = true;
 $catatanTambahan = null;
-const NAMA_MATA_KULIAH = "Pemrograman web Dasar";
+
+const NAMA_MATA_KULIAH ="Pemrograman web Dasar";
 const PROFIL_GITHUB = "https://github.com/2622500033-malya/2622500033-PWD-SI1A-26270";
- 
-// Bagian 2: operator
+
+// Bagian 2: operator 
 $batasSemester = 7;
 $sisaSemester = $batasSemester - $semester;
-$semesterValid = $semester >= 1 && $semester <= $batasSemester;
-$statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa";
- 
+$semesterValid = $semester >= 1 && $semester <=$batasSemester;
+$statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa"; 
+
 // Bagian 3: Percabangan if-elseif-else
-if ($semester < 3) {
+if ($semester < 3){
     $keteranganSemester = "Semester awal";
 } elseif ($semester <= 6) {
     $keteranganSemester = "Semester menengah";
@@ -28,73 +116,17 @@ if ($semester < 3) {
     $keteranganSemester = "Semester akhir";
 }
 $namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
- 
+
 // Bagian 4: Percabangan switch-case-default
 switch ($programStudi) {
-    case "SI":
-        $fokusProgramStudi = "Sistem informasi dan proses bisnis";
-        break;
-    case "TI":
-        $fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
-        break;
-    default:
-        $fokusProgramStudi = "Belum ditentukan";
-}
- 
-// P7: penggunaan POST
-$pesanKesalahan = '';
- 
-// 1. Ambil input lebih dulu (aman walau belum ada POST)
-$nama         = trim((string) ($_POST['nama'] ?? ''));
-$email        = trim((string) ($_POST['email'] ?? ''));
-$semesterForm = trim((string) ($_POST['semester'] ?? ''));
-$jenisPesan   = (string) ($_POST['jenis_pesan'] ?? '');
-$prodi        = (string) ($_POST['prodi'] ?? '');
-$pesan        = trim((string) ($_POST['pesan'] ?? ''));
-$tanggal      = (string) ($_POST['tanggal'] ?? '');
-$minat        = $_POST['minat'] ?? [];
- 
-// 2. Semua validasi hanya dijalankan saat form dikirim
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($nama === '')         $pesanKesalahan .= 'Nama lengkap wajib diisi. ';
-    if ($email === '')        $pesanKesalahan .= 'Email wajib diisi. ';
-    if ($semesterForm === '') $pesanKesalahan .= 'Semester wajib diisi. ';
-    if ($tanggal === '')      $pesanKesalahan .= 'Tanggal kunjungan wajib diisi. ';
-    if ($jenisPesan === '')   $pesanKesalahan .= 'Jenis pesan wajib dipilih. ';
-    if ($prodi === '')        $pesanKesalahan .= 'Program studi wajib dipilih. ';
-    if ($pesan === '')        $pesanKesalahan .= 'Pesan wajib diisi. ';
-    if (empty($minat))        $pesanKesalahan .= 'Minat wajib dipilih minimal satu. ';
- 
-    if ($semesterForm !== '') {
-        $semesterInt = filter_var($semesterForm, FILTER_VALIDATE_INT);
-        if ($semesterInt === false || $semesterInt < 1 || $semesterInt > 14) {
-            $pesanKesalahan .= 'Semester harus berupa bilangan bulat antara 1 sampai 14. ';
-        }
-    }
- 
-    if ($email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-        $pesanKesalahan .= 'Format email tidak valid. ';
-    }
- 
-    if ($jenisPesan !== '' && !in_array($jenisPesan, ['pertanyaan', 'saran'], true)) {
-        $pesanKesalahan .= 'Jenis pesan tidak valid. ';
-    }
- 
-    if ($prodi !== '' && !in_array($prodi, ['SI', 'TI'], true)) {
-        $pesanKesalahan .= 'Program studi tidak valid. ';
-    }
- 
-    $minatDiizinkan = ['HTML', 'CSS'];
-    if (!is_array($minat)) {
-        $pesanKesalahan .= 'Format pilihan topik tidak valid. ';
-    } else {
-        foreach ($minat as $topik) {
-            if (!in_array($topik, $minatDiizinkan, true)) {
-                $pesanKesalahan .= 'Pilihan topik tidak valid. ';
-                break;
-            }
-        }
-    }
+  case "SI":
+    $fokusProgramStudi = "Sistem informasi dan proses bisnis";
+    break;
+  case "TI":
+    $fokusProgramStudi = "Komputasi dan pengembangan perangkat lunak";
+    break;
+  default:
+    $fokusProgramStudi = "Belum ditentukan";
 }
  
 ?>
