@@ -1,4 +1,4 @@
-* { 
+* {
     box-sizing: border-box;
 }
 
@@ -6,16 +6,19 @@ body {
     margin: 0;
     font-family: "Times New Roman", serif;
 }
+
 #header {
     background-color: #2010b1;
     padding: 15px 20px;
     color: #ffffff;
 }
+
 #header h1 {
     margin: 0;
     font-weight: normal;
     font-size: 40px;
 }
+
 #menu {
     float: left;
     width: 130px;
@@ -24,11 +27,17 @@ body {
     text-align: center;
     padding-top: 30px;
 }
+
+#menu li {
+    list-style: none;
+}
+
 #menu a {
     display: block;
     margin-bottom: 60px;
     color: #ffffff;
 }
+
 #isi {
     margin-left: 130px;
     min-height: 370px;
@@ -36,39 +45,115 @@ body {
     background-color: #ffffff;
     width: auto;
     font-size: 20px;
+    text-align: center;
 }
+
 #isi h2 {
     text-align: center;
     margin: 0 0 10px 0;
 }
-#gambar img {
-    width: 100px;
-    height: 100px;
-}
-.tarian {
-    display: inline-block;
-    width: 110px;
-    margin: 10px;
-    text-align: center;
-}
-.tarian img {
-    width: 100px;
-    height: 100px;
-}
-#isi .tarian p {
-    margin: 5px 0 0 0;
-    font-size: 13px;
-    text-align: center;
-}
+
 #isi p {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     text-align: justify;
 }
+
 #footer {
     clear: both;
     color: #ffffff;
     background-color: #2010b1;
     padding: 15px 20px;
     font-weight: bold;
+    text-align: center;
+}
+
+/* ===== Gaya form (registrasi) ===== */
+#isi form {
+    max-width: 520px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+}
+
+.baris {
+    margin-bottom: 18px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.judul {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+label {
+    color: blue;
+}
+
+#isi input[type="text"],
+#isi input[type="email"],
+#isi input[type="number"],
+#isi input[type="date"],
+#isi input[type="tel"],
+#isi select,
+#isi textarea,
+.input-form {
+    width: 100%;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#isi textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#isi input:focus,
+#isi select:focus,
+#isi textarea:focus,
+.input-form:focus {
+    outline: none;
+    border-color: #205bff;
+    box-shadow: 0 0 4px rgba(32, 91, 255, 0.5);
+}
+
+.pilihan label {
+    display: inline-block;
+    margin-right: 18px;
+    font-size: 16px;
+}
+
+.tombol {
+    margin-top: 10px;
+}
+
+.tombol button {
+    padding: 8px 22px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #2010b1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tombol button:hover {
+    background-color: #205bff;
+}
+
+.tombol .batal {
+    background-color: #777777;
+}
+
+.tombol .batal:hover {
+    background-color: #555555;
 }
