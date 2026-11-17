@@ -5,5 +5,7 @@
   4.mengidentifikasi kebutuhan data formulir kontak P10
   5.menentukan data formulir yang akan disimpan ke basis data
   6.menentukan representasi data pilihan minat
-  7.merancang atribut dan tipe data tabel kontak 
-  8.menentukan primary key dan auto increment tabel kontak
+  7.menetukan nama basis data dan tabel P10
+  8.merancang atribut dan tipe data tabel kontak 
+  9.menentukan primary key dan auto increment tabel kontak
+  10.memeriksa rancangan akhir struktur tabel kontak
