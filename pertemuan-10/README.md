@@ -12,3 +12,4 @@
   11.membuat dan mengisi database
   12.mengecreate database dan table 
   13.memeriksa struktur tabel dan memperbaiki ketidaksesuaian data
+  14.memasukkan data awal ke tabel kontak
