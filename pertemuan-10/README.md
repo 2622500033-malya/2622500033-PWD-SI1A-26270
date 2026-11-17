@@ -11,3 +11,4 @@
   10.memeriksa rancangan akhir struktur tabel kontak
   11.membuat dan mengisi database
   12.mengecreate database dan table 
+  13.memeriksa struktur tabel dan memperbaiki ketidaksesuaian data
