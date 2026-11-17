@@ -9,3 +9,4 @@
   8.merancang atribut dan tipe data tabel kontak 
   9.menentukan primary key dan auto increment tabel kontak
   10.memeriksa rancangan akhir struktur tabel kontak
+  11.membuat dan mengisi database
