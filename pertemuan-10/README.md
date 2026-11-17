@@ -14,3 +14,4 @@
   13.memeriksa struktur tabel dan memperbaiki ketidaksesuaian data
   14.memasukkan data awal ke tabel kontak
   15.mempelajari perintah SQL insert
+  16.memeriksa data awal pada tabel kontak
