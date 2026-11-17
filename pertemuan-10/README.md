@@ -16,3 +16,4 @@
   15.mempelajari perintah SQL insert
   16.memeriksa data awal pada tabel kontak
   17.memeriksa dan memperbaiki data awal tabel kontak
+  18.menentukan pengaturan ekspor basis data
