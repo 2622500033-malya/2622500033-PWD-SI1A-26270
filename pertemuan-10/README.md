@@ -15,3 +15,4 @@
   14.memasukkan data awal ke tabel kontak
   15.mempelajari perintah SQL insert
   16.memeriksa data awal pada tabel kontak
+  17.memeriksa dan memperbaiki data awal tabel kontak
