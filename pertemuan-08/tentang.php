@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tentang - Web Tarian Bangka Belitung</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>2622500033_Malya Nadha Janeeta_SI1A</title>
 </head>
 <body>
     <div id="header">
-        <h1>Web Tarian Daerah Bangka Belitung</h1>
+        <h1> Sanggar Tarian Bangka Belitung</h1>
     </div>
     <div id="menu">
-        <a href="index.html">Home</a>
-        <a href="profil.html">Profil</a>
-        <a href="tentang.html">Tentang</a>
+        <a href="index.php">Home</a>
+        <a href="profil.php">Profil</a>
+        <a href="tentang.php">Tentang</a>
         <a href="registrasi.php">Registrasi</a>
     </div>
     <div id="isi">
@@ -22,6 +23,7 @@
             perantau, dan pedagang yang pernah singgah di pulau ini. Tarian di sini 
             umumnya dibawakan dalam suasana gembira, misalnya pesta rakyat, penyambutan tamu,
             dan acara adat.
+        </p>
         <p>makna dari tarian daerah Bangka Belitung adalah sebagai berikut:</p>
         <p>1. Keramahan dan keterbukaan
             Tarian penyambutan seperti Tari Sepen menunjukkan sikap masyarakat yang ramah, 

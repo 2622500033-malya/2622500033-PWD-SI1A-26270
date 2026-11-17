@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,10 +14,10 @@
         <h1>Sanggar Tarian Bangka Belitung</h1>
     </div>
     <div id="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="profil.html">Profil</a></li>
-    <li><a href="tentang.html">Tentang</a></li>
-    <li><a href="registrasi.html">Registrasi</a></li>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="profil.php">Profil</a></li>
+    <li><a href="tentang.php">Tentang</a></li>
+    <li><a href="registrasi.php">Registrasi</a></li>
     </div>
 
     <div id="isi">
