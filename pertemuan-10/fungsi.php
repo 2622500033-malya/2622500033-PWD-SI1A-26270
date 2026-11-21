@@ -1,7 +1,7 @@
 <?php 
 function bersihkan ($teks)
 {
-    return htmlspeciarchars($teks ?? "", ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars($teks ?? "", ENT_QUOTES, "UTF-8");
 }
 
 function tebal ($teks)

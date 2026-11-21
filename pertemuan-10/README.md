@@ -18,3 +18,4 @@
   17.memeriksa dan memperbaiki data awal tabel kontak
   18.menentukan pengaturan ekspor basis data
   19.memeriksa kelengkapan berkas ekspor SQL
+  20.menambah index.php dan fungsi.php 
