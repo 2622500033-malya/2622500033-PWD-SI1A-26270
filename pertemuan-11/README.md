@@ -1,2 +1,4 @@
 # pertemuan-11 - Analisis Kebutuhan Data dan Dasar MySQL Satu Tabe
  1.Menyalin artefak pertemuan-10 ke pertemuan-11 sebagai baseline 
+ 2.menyiapkan direktori dan lingkungan pengembangan pertememuan-11
+ 3.memeriksa kesiapan basis data dan tabel kontak P11
