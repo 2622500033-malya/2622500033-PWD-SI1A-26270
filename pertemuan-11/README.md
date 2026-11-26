@@ -5,3 +5,4 @@
  4.membuat berkas koneksi PHP-MySQL P11
  5.menentukan parameter koneksi basis data P11
  6.mengatur pelaporan kesalahan MySQLi P11
+ 7.Mengimplementasikan koneksi PHP-MySQL menggunakan MySQLi
