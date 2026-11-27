@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 17, 2026 at 06:04 AM
+-- Generation Time: Nov 27, 2026 at 07:40 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -44,7 +44,8 @@ CREATE TABLE `tbl_kontak_2622500033` (
 --
 
 INSERT INTO `tbl_kontak_2622500033` (`id`, `nama`, `email`, `semester`, `tanggal`, `jenis_pesan`, `minat`, `prodi`, `pesan`) VALUES
-(1, 'Malya Nadha Janeeta', '2622500033@mahasiswa.atmaluhur.ac.id', 1, '2026-11-17', 'saran', 'HTML,CSS', 'SI', 'teruslah berusaha, usaha tidak mengkhianati hasil');
+(1, 'Malya Nadha Janeeta', '2622500033@mahasiswa.atmaluhur.ac.id', 1, '2026-11-27', 'saran', 'HTML, CSS', 'SI', 'Kesalahan adalah informasi untuk belajar, bukan bukti bahwa kamu gagal selamanya.'),
+(2, 'Livina Gustini', '2622500050@mahasiswa.atmaluhur.ac.id', 1, '2026-11-27', 'pertanyaan', 'HTML, CSS', 'SI', 'Fokus pada progres, bukan validasi.');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +65,7 @@ ALTER TABLE `tbl_kontak_2622500033`
 -- AUTO_INCREMENT for table `tbl_kontak_2622500033`
 --
 ALTER TABLE `tbl_kontak_2622500033`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
